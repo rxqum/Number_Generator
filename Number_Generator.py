@@ -91,8 +91,10 @@ class UI(QWidget):
             num = int(self.enter_range.text())
             num2 = int(self.enter_range1.text())
             if num > num2:
-                num = 0
-                num2 = 100
+                temp_num = num2
+                temp_num2 = num
+                num = temp_num
+                num2 = temp_num2
                 self.enter_min_range.setText("Minimum (this number must be lower)")
                 self.enter_max_range.setText("Minimum (than this one)")
             else:
